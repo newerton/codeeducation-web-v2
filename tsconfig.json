@@ -20,6 +20,9 @@
     "incremental": true,
     "baseUrl": "./src",
     "paths": {
+      "@assets/*": [
+        "assets/*"
+      ],
       "@components/*": [
         "components/*"
       ],
@@ -29,11 +32,20 @@
       "@hooks/*": [
         "hooks/*"
       ],
+      "@layouts/*": [
+        "layouts/*"
+      ],
       "@pages/*": [
         "pages/*"
       ],
+      "@services/*": [
+        "services/*"
+      ],
       "@store/*": [
         "store/*"
+      ],
+      "@utils/*": [
+        "utils/*"
       ]
     }
   },
