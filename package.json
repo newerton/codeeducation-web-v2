@@ -20,7 +20,7 @@
     "axios": "^1.18.1",
     "jsonwebtoken": "^9.0.3",
     "next": "^16.2.9",
-    "next-auth": "^4.24.14",
+    "next-auth": "^4.24.15",
     "nextjs-progressbar": "^0.0.16",
     "notistack": "^3.0.2",
     "react": "^19.2.7",
