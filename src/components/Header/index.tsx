@@ -1,3 +1,4 @@
+import appTheme, { sideNavWidth } from '@config/theme';
 import {
   Box,
   Container,
@@ -11,12 +12,12 @@ import {
   Typography,
   styled,
 } from '@mui/material';
-import MuiAppBar, { AppBarProps as MuiAppBarProps } from '@mui/material/AppBar';
-import { signOut, useSession } from 'next-auth/react';
+import MuiAppBar, {
+  type AppBarProps as MuiAppBarProps,
+} from '@mui/material/AppBar';
 import { useRouter } from 'next/router';
-import { MouseEvent, MouseEventHandler, useState } from 'react';
-
-import appTheme, { sideNavWidth } from '@config/theme';
+import { signOut, useSession } from 'next-auth/react';
+import { type MouseEvent, type MouseEventHandler, useState } from 'react';
 
 type HeaderProps = {
   openDrawer: boolean;

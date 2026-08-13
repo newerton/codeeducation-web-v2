@@ -6,20 +6,20 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint .",
+    "lint": "biome check --write --unsafe",
     "postinstall": "husky install"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/server": "^11.11.0",
     "@emotion/styled": "^11.14.1",
-    "@mui/icons-material": "^9.2.0",
-    "@mui/material": "^9.2.0",
-    "@mui/x-data-grid": "^9.10.1",
+    "@mui/icons-material": "^9.3.1",
+    "@mui/material": "^9.3.1",
+    "@mui/x-data-grid": "^9.11.0",
     "@reduxjs/toolkit": "^2.12.0",
     "axios": "^1.19.0",
     "jsonwebtoken": "^9.0.3",
-    "next": "^16.2.12",
+    "next": "^16.3.0",
     "next-auth": "^4.24.15",
     "nextjs-progressbar": "^0.0.16",
     "notistack": "^3.0.2",
@@ -30,11 +30,12 @@
     "react-router-dom": "^7.18.2"
   },
   "devDependencies": {
+    "@biomejs/biome": "^2.5.8",
     "@commitlint/cli": "^21.2.1",
     "@commitlint/config-conventional": "^21.2.0",
     "@types/axios": "^0.14.4",
     "@types/jsonwebtoken": "^9.0.10",
-    "@types/node": "^26.1.2",
+    "@types/node": "^26.2.0",
     "@types/react": "^19.2.18",
     "@types/react-dom": "^19.2.4",
     "husky": "^9.1.7",
@@ -45,6 +46,7 @@
     "postcss": "^8.5.25",
     "uuid": "^14.0.1",
     "react-router": "^8.3.0",
-    "sharp": "^0.35.3"
+    "sharp": "^0.35.3",
+    "nanoid": "^6.0.1"
   }
 }

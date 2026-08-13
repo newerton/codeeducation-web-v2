@@ -1,5 +1,5 @@
 import { Box, styled } from '@mui/material';
-import { BoxProps } from '@mui/system';
+import type { BoxProps } from '@mui/system';
 
 const StyledBox = styled(Box)<BoxProps>(
   ({ theme, textTransformStyle, ellipsis }: any) => ({

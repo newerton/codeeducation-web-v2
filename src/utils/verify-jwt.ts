@@ -8,7 +8,7 @@ const verifyJwt = (
   let payload;
   try {
     payload = jwt.verify(token, nextAuthSecret);
-  } catch (e) {
+  } catch (_e) {
     return false;
   }
   return payload;

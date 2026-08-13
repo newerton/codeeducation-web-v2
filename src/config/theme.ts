@@ -1,10 +1,10 @@
 import { createTheme } from '@mui/material';
 import {
-  Components,
-  PaletteOptions,
+  type Components,
+  type PaletteOptions,
   responsiveFontSizes,
 } from '@mui/material/styles';
-import { TypographyOptions } from '@mui/material/styles/createTypography';
+import type { TypographyOptions } from '@mui/material/styles/createTypography';
 
 export const sideNavWidth = 260;
 

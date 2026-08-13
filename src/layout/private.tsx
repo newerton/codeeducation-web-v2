@@ -1,9 +1,7 @@
-import { Box, Toolbar, styled } from '@mui/material';
-import { useState } from 'react';
-
 import Header from '@components/Header';
 import Sidenav from '@components/Sidenav';
-import { sideNavWidth } from '@config/theme';
+import { Toolbar, styled } from '@mui/material';
+import { useState } from 'react';
 
 const Main = styled('div', { shouldForwardProp: (prop) => prop !== 'open' })<{
   open?: boolean;
@@ -42,10 +40,8 @@ export default function LayoutPrivate({ children }: any) {
       />
 
       <Main open={openDrawer}>
-        <>
-          <Toolbar />
-          {children}
-        </>
+        <Toolbar />
+        {children}
       </Main>
     </>
   );

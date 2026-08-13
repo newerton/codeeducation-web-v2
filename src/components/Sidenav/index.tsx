@@ -1,12 +1,11 @@
+import logo from '@assets/images/logo.png';
+import VerticalNav from '@components/VerticalNav/VerticalNav';
+import appTheme from '@config/theme';
 import { Drawer, Icon, IconButton } from '@mui/material';
 import { Box } from '@mui/system';
 import Image from 'next/image';
-import { Dispatch, memo } from 'react';
+import { type Dispatch, memo } from 'react';
 import PerfectScrollbar from 'react-perfect-scrollbar';
-
-import logo from '@assets/images/logo.png';
-import VerticalNav from '@components/VerticalNav/VerticalNav';
-import appTheme, { sideNavWidth } from '@config/theme';
 
 export type SidenavProps = {
   openDrawer: boolean;

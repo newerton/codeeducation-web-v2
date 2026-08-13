@@ -1,9 +1,8 @@
-import verifyJwt from '@utils/verify-jwt';
-import { NextApiRequest, NextApiResponse } from 'next';
-import NextAuth, { NextAuthOptions } from 'next-auth';
-import Credentials from 'next-auth/providers/credentials';
-
 import api from '@services/api';
+import verifyJwt from '@utils/verify-jwt';
+import type { NextApiRequest, NextApiResponse } from 'next';
+import NextAuth, { type NextAuthOptions } from 'next-auth';
+import Credentials from 'next-auth/providers/credentials';
 
 const createOptions = (req: NextApiRequest) =>
   ({
@@ -98,7 +97,7 @@ const createOptions = (req: NextApiRequest) =>
         return Promise.resolve(session);
       },
     },
-  } as NextAuthOptions);
+  }) as NextAuthOptions;
 
 const NextAuthHandler = async (req: NextApiRequest, res: NextApiResponse) => {
   return NextAuth(req, res, createOptions(req));

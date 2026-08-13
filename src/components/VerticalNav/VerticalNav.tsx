@@ -1,10 +1,9 @@
+import { Paragraph, Span } from '@components/Typography';
 import { ButtonBase, Icon } from '@mui/material';
 import { Box, styled } from '@mui/system';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { memo } from 'react';
-
-import { Paragraph, Span } from '@components/Typography';
 
 import VerticalNavExpansionPanel from './VerticalNavExpansionPanel';
 

@@ -1,7 +1,7 @@
 import { Box } from '@mui/material';
 import {
-  GridColDef,
-  GridRowsProp,
+  type GridColDef,
+  type GridRowsProp,
   GridToolbar,
   DataGrid as MuiDataGrid,
 } from '@mui/x-data-grid';

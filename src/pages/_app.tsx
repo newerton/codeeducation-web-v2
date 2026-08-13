@@ -1,8 +1,8 @@
-import { CacheProvider, EmotionCache } from '@emotion/react';
+import { CacheProvider, type EmotionCache } from '@emotion/react';
 import { Box, CssBaseline, ThemeProvider } from '@mui/material';
-import { SessionProvider, SessionProviderProps } from 'next-auth/react';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
+import { SessionProvider, type SessionProviderProps } from 'next-auth/react';
 import NextNProgress from 'nextjs-progressbar';
 import { SnackbarProvider } from 'notistack';
 import type { ReactElement, ReactNode } from 'react';

@@ -1,4 +1,4 @@
-import { GetServerSidePropsContext } from 'next';
+import type { GetServerSidePropsContext } from 'next';
 import { getSession } from 'next-auth/react';
 
 async function protectedRoutes(context: GetServerSidePropsContext) {

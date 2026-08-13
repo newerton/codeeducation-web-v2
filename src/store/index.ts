@@ -1,4 +1,8 @@
-import { Action, ThunkAction, configureStore } from '@reduxjs/toolkit';
+import {
+  type Action,
+  type ThunkAction,
+  configureStore,
+} from '@reduxjs/toolkit';
 
 import categoriesReducer from '@store/categories/categoriesSlice';
 

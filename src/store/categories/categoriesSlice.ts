@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-import { RootState } from '..';
+import type { RootState } from '..';
 
 export type Category = {
   id: string;
@@ -27,9 +27,9 @@ const categoriesSlice = createSlice({
   name: 'categories',
   initialState,
   reducers: {
-    createCategories(state, action) {},
-    updateCategories(state, action) {},
-    deleteCategories(state, action) {},
+    createCategories(_state, _action) {},
+    updateCategories(_state, _action) {},
+    deleteCategories(_state, _action) {},
   },
 });
 

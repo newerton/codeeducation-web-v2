@@ -1,4 +1,4 @@
-import api from "./api";
+import api from './api';
 
 type FindZipcodeResponse = {
   cep: string;
@@ -32,12 +32,12 @@ const findZipcode = async (zipcode: string): Promise<FindZipcodeResponse> => {
     .then(async ({ status, data }: any) => {
       if (status === 200) {
         const { status: stateStatus, data: stateData } = await getStateId(
-          data.state
+          data.state,
         );
         if (stateStatus === 200) {
           const { status: cityStatus, data: cityData } = await getCityId(
             stateData.id,
-            data.city
+            data.city,
           );
           if (cityStatus === 200) {
             return {
@@ -54,7 +54,7 @@ const findZipcode = async (zipcode: string): Promise<FindZipcodeResponse> => {
       }
     })
     .catch(() => {
-      throw new Error("CEP não encontrado");
+      throw new Error('CEP não encontrado');
     });
 };
 

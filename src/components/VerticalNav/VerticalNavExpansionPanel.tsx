@@ -1,7 +1,7 @@
 import { ButtonBase, Icon } from '@mui/material';
 import { Box, styled } from '@mui/system';
 import { useRouter } from 'next/router';
-import React, { memo, useCallback, useEffect, useRef, useState } from 'react';
+import { memo, useCallback, useEffect, useRef, useState } from 'react';
 
 const NavExpandRoot = styled('div')(({ theme }) => ({
   '& .expandIcon': {
@@ -92,7 +92,7 @@ const VerticalNavExpansionPanel = ({ item, children, mode }: any) => {
 
   const calculateHeight = useCallback((node: any) => {
     if (node.name !== 'child') {
-      for (let child of node.children) {
+      for (const child of node.children) {
         calculateHeight(child);
       }
     }
@@ -109,7 +109,7 @@ const VerticalNavExpansionPanel = ({ item, children, mode }: any) => {
 
     const children = elementRef.current.children;
     // OPEN DROPDOWN IF CHILD IS ACTIVE
-    for (let child of children) {
+    for (const child of children) {
       if (child.firstChild.getAttribute('href') === pathname) {
         setCollapsed(false);
       }
@@ -151,7 +151,7 @@ const VerticalNavExpansionPanel = ({ item, children, mode }: any) => {
         style={
           collapsed
             ? { maxHeight: '0px' }
-            : { maxHeight: componentHeight.current + 'px' }
+            : { maxHeight: `${componentHeight.current}px` }
         }
       >
         {children}

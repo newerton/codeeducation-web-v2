@@ -1,5 +1,5 @@
-import axios from "axios";
-import { getCsrfToken, getSession, signOut } from "next-auth/react";
+import axios from 'axios';
+import { getSession, signOut } from 'next-auth/react';
 
 const baseURL = `${process.env.NEXT_PUBLIC_API_URL}`;
 
@@ -21,13 +21,13 @@ api.interceptors.response.use(
   },
   async (error) => {
     if (error.response.status === 401) {
-      const data = await signOut({ redirect: false, callbackUrl: "/login" });
+      const data = await signOut({ redirect: false, callbackUrl: '/login' });
       window.location.href = data.url;
     }
 
     console.log(`API error: `, error.message);
     return Promise.reject(error);
-  }
+  },
 );
 
 export default api;

@@ -1,20 +1,19 @@
+import DataGrid from '@components/DataGrid';
+import { useAppSelector } from '@hooks/index';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import { Box, Button, IconButton } from '@mui/material';
 import Typography from '@mui/material/Typography';
-import {
+import type {
   GridColDef,
   GridRenderCellParams,
   GridRowsProp,
 } from '@mui/x-data-grid';
+import { selectCategories } from '@store/categories/categoriesSlice';
+import LayoutPrivate from 'layout/private';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useCallback } from 'react';
-
-import DataGrid from '@components/DataGrid';
-import { useAppSelector } from '@hooks/index';
-import { selectCategories } from '@store/categories/categoriesSlice';
-import LayoutPrivate from 'layout/private';
 
 const CategoriesIndex = () => {
   const { push } = useRouter();
